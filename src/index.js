@@ -1,5 +1,10 @@
 //@flow
 
+// importing default with qualified import
+import U, { debug, foo } from './utils.js'
+// importing default with wildcard import
+import U2, * as Utils from './utils.js'
+
 import type { User, Tweet } from './types.js'
 
 const user: User = {id: 4, username: "omega@example.com"}
@@ -52,4 +57,9 @@ class Notifier {
 const notifier = new Notifier([jo, mo])
 notifier.sendTweets([chubbTweet, forrestTweet])
 notifier.testRun()
+
+Utils.debug('HTTP', 404)
+U()
+U2()
+Utils.foo()
 
