@@ -7,6 +7,8 @@ import U2, * as Utils from './utils.js'
 
 import type { User, Tweet } from './types.js'
 
+import sample from './proto.js'
+
 const user: User = {id: 4, username: "omega@example.com"}
 const jo: User = {id: 23, username: "jo@example.com"}
 const mo: User = {id: 42, username: "mo@example.com"}
@@ -63,3 +65,19 @@ U()
 U2()
 Utils.foo()
 
+function Person() {
+    this.age = 42
+    this.name = "Tom"
+}
+
+let tom = new Person()
+console.log([tom])
+
+console.log([Person.constructor])
+
+console.log([Person.constructor()])
+
+const names = Object.getOwnPropertyNames(notifier)
+console.log(names)
+
+sample()
